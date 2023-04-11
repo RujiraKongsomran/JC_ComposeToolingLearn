@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -29,5 +28,25 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+}
+
+@Preview(
+    name = "small font",
+    group = "font scales",
+    fontScale = 0.5f,
+    showBackground = true
+)
+@Preview(
+    name = "large font",
+    group = "font scales",
+    fontScale = 1.5f,
+    showBackground = true
+)
+annotation class FontScalePreviews
+
+@FontScalePreviews
+@Composable
+fun CreateMultiPreviewAnnotations() {
+    Text(text = stringResource(R.string.name))
 }
 
