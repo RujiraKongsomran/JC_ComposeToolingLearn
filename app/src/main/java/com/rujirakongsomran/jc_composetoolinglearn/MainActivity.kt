@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -49,4 +50,18 @@ annotation class FontScalePreviews
 fun CreateMultiPreviewAnnotations() {
     Text(text = stringResource(R.string.name))
 }
+
+@Preview(locale = "ja", name = "Japanese")
+@Preview(locale = "hu", name = "Hungarian")
+annotation class LocalesPreview
+
+@LocalesPreview
+@Composable
+fun LocaleParameter() {
+    Button(onClick = { /*TODO*/ }) {
+        Text(text = stringResource(id = R.string.name))
+    }
+}
+
+
 
