@@ -79,6 +79,18 @@ fun ThemesPreviewDisplay() {
     }
 }
 
+@FontScalePreviews
+@LocalesPreview
+@ThemesPreview
+annotation class CombinedPreview
+
+@CombinedPreview
+@Composable
+fun CombinedPreviewDisplay(){
+    OutlinedButton(onClick = { /*TODO*/ }) {
+        Text(text = "Combined")
+    }
+}
 
 
 
